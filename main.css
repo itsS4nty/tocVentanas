@@ -77,4 +77,12 @@ body {
 .modal.right.fade.in .modal-dialog {
     right: 0;
 }
-
+.btn_empty {
+    background: none !important;
+	color: inherit !important;
+	border: none !important;
+	padding: 0 !important;
+	font: inherit !important;
+	cursor: pointer !important;
+    outline: inherit !important;
+}
