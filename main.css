@@ -23,6 +23,18 @@ body {
     width: 10vw;
     margin: 15px;
 }
+.btn_empty {
+    background: none !important;
+	color: inherit !important;
+	border: none !important;
+	padding: 0 !important;
+    font: inherit !important;
+    cursor: default !important;
+    outline: inherit !important;
+}
+.btn_fc {
+    width: 7vw;
+}
 /* MODAL DERECHA */ 
 /*******************************
 * MODAL AS LEFT/RIGHT SIDEBAR
@@ -77,12 +89,4 @@ body {
 .modal.right.fade.in .modal-dialog {
     right: 0;
 }
-.btn_empty {
-    background: none !important;
-	color: inherit !important;
-	border: none !important;
-	padding: 0 !important;
-	font: inherit !important;
-	cursor: pointer !important;
-    outline: inherit !important;
-}
+
