@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
+    <script src="resetForm.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -15,9 +16,9 @@
         <button type="button" class="btn btn-outline-primary btn-lg" data-toggle="modal" data-target="#caja">Caja</button>
         <button type="button" class="btn btn-outline-primary btn-lg" data-toggle="modal" data-target="#fichar">Fichar</button> 
         <button type="button" class="btn btn-outline-primary btn-lg" data-toggle="modal" data-target="#ticketsPagar">Tickets a pagar</button>
-        <button type="button" class="btn btn-outline-primary btn-lg">Configurar PC</button>
-        <button type="button" class="btn btn-outline-primary btn-lg">Entrada dinero</button>
-        <button type="button" class="btn btn-outline-primary btn-lg">Salida dinero</button>
+        <button type="button" class="btn btn-outline-primary btn-lg" data-toggle="modal" data-target="#configuracion">Configurar PC</button>
+        <button type="button" class="btn btn-outline-primary btn-lg" data-toggle="modal" data-target="#dinero">Entrada dinero</button>
+        <button type="button" class="btn btn-outline-primary btn-lg" data-toggle="modal" data-target="#dinero">Salida dinero</button>
     </div>
     <div class="version">
         <p class="vers mb-0">Version 2.0.1</p>
@@ -166,6 +167,94 @@
       </div>
     </div>
     <!-- Fin modal tickets a pagar -->
+    <!-- Inicio modal entrada/salida -->
+    <div class="modal fade" id="dinero" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Entrada/Salida dinero</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="btn-group-vertical ml-4 mt-4" role="group" aria-label="Basic example">
+              <div class="btn-group">
+                 &nbsp;&nbsp;&nbsp;<input class="text-center form-control-lg mb-2" id="code">
+              </div>
+              <div class="btn-group">
+                <a class="boton" onclick="document.getElementById('code').value=document.getElementById('code').value + '1';">1</a>
+                <a class="boton" onclick="document.getElementById('code').value=document.getElementById('code').value + '2';">2</a>
+                <a class="boton" onclick="document.getElementById('code').value=document.getElementById('code').value + '3';">3</a>
+              </div>
+              <div class="btn-group">
+                <a class="boton" onclick="document.getElementById('code').value=document.getElementById('code').value + '4';">4</a>
+                <a class="boton" onclick="document.getElementById('code').value=document.getElementById('code').value + '5';">5</a>
+                <a class="boton" onclick="document.getElementById('code').value=document.getElementById('code').value + '6';">6</a>
+              </div>
+              <div class="btn-group">
+                <a class="boton" onclick="document.getElementById('code').value=document.getElementById('code').value + '7';">7</a>
+                <a class="boton" onclick="document.getElementById('code').value=document.getElementById('code').value + '8';">8</a>
+                <a class="boton" onclick="document.getElementById('code').value=document.getElementById('code').value + '9';">9</a>
+              </div>
+              <div class="btn-group">
+                <a class="boton" onclick="document.getElementById('code').value=document.getElementById('code').value.slice(0, -1);">&lt;</a>
+                <a class="boton" onclick="document.getElementById('code').value=document.getElementById('code').value + '0';">0</a>
+                <a class="boton" onclick="document.getElementById('code').value=document.getElementById('code').value + ',';">,</a>
+              </div>
+          </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="document.getElementById('code').value=document.getElementById('code').value='';">OK!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fin modal entrada/salida -->
+    <!-- Inicio modal configuracion -->
+    <div class="modal fade" id="configuracion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Configuracion PC</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+          </div>
+          <div class="modal-body">  
+            <form action="#">
+              <div class="form-group">
+                <label for="licencia">Licencia</label>
+                <input type="text" class="form-control" id="licencia" placeholder="Licencia">
+              </div>
+              <div class="form-group">
+                <label for="contraseña">Contraseña</label>
+                <input type="password" class="form-control" id="contraseña" placeholder="Contraseña">
+              </div>
+              <div class="form-group">
+                <label for="impresora">Impresora</label>
+                <select class="form-control" id="impresora">
+                  <option>USB</option>
+                  <option>Serial</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="datafono">Datafono</label>
+                <select class="form-control" id="datafono">
+                  <option>ClearOne</option>
+                  <option>3G</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+          <button type="button" class="btn btn-primary" onclick="reset()" data-dismiss="modal">OK!</button>
+          <button type="button" class="btn btn-danger" onclick="reset()">Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fin modal configuracion -->
     <!-- FIN MODALES PRINCIPALES -->
     <!-- INICIO MODALES EXTRAS -->
     <!-- Visualizacion tickets -->
