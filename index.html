@@ -14,7 +14,7 @@
     <div class="container">
         <button type="button" class="btn btn-outline-primary btn-lg" data-toggle="modal" data-target="#caja">Caja</button>
         <button type="button" class="btn btn-outline-primary btn-lg" data-toggle="modal" data-target="#fichar">Fichar</button> 
-        <button type="button" class="btn btn-outline-primary btn-lg">Tickets a pagar</button>
+        <button type="button" class="btn btn-outline-primary btn-lg" data-toggle="modal" data-target="#ticketsPagar">Tickets a pagar</button>
         <button type="button" class="btn btn-outline-primary btn-lg">Configurar PC</button>
         <button type="button" class="btn btn-outline-primary btn-lg">Entrada dinero</button>
         <button type="button" class="btn btn-outline-primary btn-lg">Salida dinero</button>
@@ -117,6 +117,55 @@
       </div>
     </div>
     <!-- Fin modal fichar -->
+    <!-- Inicio modal tickets a pagar -->
+    <div class="modal fade" id="ticketsPagar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Caja</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+          </div>
+          <div class="modal-body">  
+                <table class="table">
+                  <thead class="thead-light">
+                    <tr>
+                      <th scope="col">Nº Ticket</th>
+                      <th scope="col">Total</th>
+                      <th scope="col">Fecha</th>
+                      <th scope="col">Descripcion</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row"><button type="button" class="btn btn-primary btn_empty" data-toggle="modal" data-target="#ticket" data-dismiss="modal">1</button></th>
+                      <td>3.50€</td>
+                      <td>13-05-2020 14:57:41</td>
+                      <td>Mesa 23</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>7.25€</td>
+                      <td>13-05-2020 15:04:35</td>
+                      <td>Mesa 4</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>1.75€</td>
+                      <td>13-05-2020 15:06:27</td>
+                      <td>Mesa 16</td>
+                    </tr>
+                  </tbody>
+                </table>
+          </div>
+          <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">OK!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fin modal tickets a pagar -->
     <!-- FIN MODALES PRINCIPALES -->
     <!-- INICIO MODALES EXTRAS -->
     <!-- Visualizacion tickets -->
