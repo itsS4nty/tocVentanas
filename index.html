@@ -27,7 +27,7 @@
     <!-- INICIO MODALES PRINCIPALES -->
     <!-- Inicio modal caja -->
     <div class="modal fade" id="caja" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Caja</h5>
@@ -39,26 +39,25 @@
                   <table class="table">
                     <thead class="thead-light">
                       <tr>
-                        <th scope="col">Nº Ticket</th>
-                        <th scope="col">Total</th>
-                        <th scope="col">Fecha</th>
+                        <th scope="col" width="400px">Detalles</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <th scope="row"><button type="button" class="btn btn-primary btn_empty" data-toggle="modal" data-target="#ticket" data-dismiss="modal">1</button></th>
-                        <td>3.50€</td>
-                        <td>13-05-2020 14:57:41</td>
+                        <td rowspan="3">
+                          <p style="font-family: consolas;">
+                            &nbsp;&nbsp;&nbsp; Factura nº 1
+                            <p style="font-family: consolas;">&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;&nbsp;Articulo&nbsp;&nbsp;Unidades&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Subtotal&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                            <hr>
+                            <p style="font-family: consolas;">&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;Baguette&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.50&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                            <hr>
+                            <p style="font-weight: bold; font-family: consolas;">&nbsp;&nbsp;&nbsp;Pagado con tarjeta&nbsp;&nbsp;&nbsp;&nbsp;Total&nbsp;&nbsp;0.50 €&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                          </p>
+                        </td>
                       </tr>
                       <tr>
-                        <th scope="row">2</th>
-                        <td>7.25€</td>
-                        <td>13-05-2020 15:04:35</td>
                       </tr>
                       <tr>
-                        <th scope="row">3</th>
-                        <td>1.75€</td>
-                        <td>13-05-2020 15:06:27</td>
                       </tr>
                     </tbody>
                   </table>
@@ -136,6 +135,7 @@
                       <th scope="col">Total</th>
                       <th scope="col">Fecha</th>
                       <th scope="col">Descripcion</th>
+                      <th scope="col">Detalles</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -144,6 +144,9 @@
                       <td>3.50€</td>
                       <td>13-05-2020 14:57:41</td>
                       <td>Mesa 23</td>
+                      <td colspan="4">
+
+                      </td>
                     </tr>
                     <tr>
                       <th scope="row">2</th>

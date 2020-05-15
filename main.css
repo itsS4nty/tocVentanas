@@ -64,6 +64,9 @@ body {
         width: 45% !important;
         margin: 0 auto !important;
 }
+.modalpref {
+    width: 1000px !important;
+}
 /* MODAL DERECHA */ 
 /*******************************
 * MODAL AS LEFT/RIGHT SIDEBAR
